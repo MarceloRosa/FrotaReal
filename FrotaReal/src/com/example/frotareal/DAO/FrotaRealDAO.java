@@ -6,8 +6,6 @@ import java.util.List;
 
 
 import com.example.frotareal.bean.FrotaRealBean;
-
-import br.unifor.programacao.paciente.bean.PacienteBean;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -83,79 +81,96 @@ public class FrotaRealDAO extends SQLiteOpenHelper {
 			Log.i(TAG_I, "Registro realizado: "+ maquina.getModelo());
 
 		}
-		public void inserirInformacoesAdicionais(PacienteBean paciente){
+		public void informacoesManutencao(FrotaRealBean maquina){
 
 			ContentValues valores = new ContentValues();
 
 			
-			valores.put("nome", paciente.getNome().toString());
-			valores.put("endereco",paciente.getEndereco().toString());
-			valores.put("celular",paciente.getCelular().toString());
-			valores.put("telefoneRes",paciente.getTelefoneRes().toString());
-			valores.put("enderecoEle",paciente.getEnderecoEle().toString());
-			valores.put("contatoUrg",paciente.getContatoUrg().toString());
+			valores.put("modelo", maquina.getModelo().toString());
+			valores.put("kminicial",maquina.getKminicial().toString());
+			valores.put("ultimatrocaoil",maquina.getUltimatrocaoil().toString());
+			valores.put("proximatrocaoil",maquina.getProximatrocaoil().toString());
+			valores.put("ultimafiltro",maquina.getUltimafiltro().toString());
+			valores.put("proximafiltro",maquina.getProximafiltro().toString());
+			valores.put("ultimafreio",maquina.getUltimafreio().toString());
+			valores.put("proximafreio",maquina.getProximafreio().toString());
+			valores.put("ultimamangueira",maquina.getUltimamangueira().toString());
+			valores.put("proximamangueira",maquina.getProximamangueira().toString());
+			valores.put("ultimageral",maquina.getUltimageral().toString());
+			valores.put("proximageral",maquina.getProximageral().toString());
+			valores.put("ultimapneu",maquina.getUltimapneu().toString());
+			valores.put("proximapneu",maquina.getProximapneu().toString());
+			valores.put("nomeoperador",maquina.getNomeoperador().toString());
 
-			String[] args = new String[]{Long.toString(paciente.getId())};
+
+
+
+			String[] args = new String[]{Long.toString(maquina.getId())};
 
 			getWritableDatabase().update(TABELA, valores, "id=?", args);
 
-			Log.i(TAG_I, "Dados Adicionais atualizados: "+ paciente.getNome());
+			Log.i(TAG_I, "Manutenção atualizada: "+ maquina.getModelo());
 			
 			
 
 		}
 		
 
-		public void atualizarRegistroPaciente(PacienteBean paciente){
+		public void atualizarRegistroMaquinas(FrotaRealBean maquina){
 
 			ContentValues valores = new ContentValues();
 
 			
-			valores.put("nome", paciente.getNome().toString());
-			valores.put("pressao", paciente.getPressao().toString());
-			valores.put("leito", paciente.getLeito().toString());
-			valores.put("bpm", paciente.getBPM().toString());
-			valores.put("temperatura",paciente.getTemperatura().toString());
-			valores.put("internacao",paciente.getMotivoInternacao().toString());
-			valores.put("tipo_sangue",paciente.getSanguineo().toString());
-
-			String[] args = new String[]{Long.toString(paciente.getId())};
+			valores.put("modelo", maquina.getModelo().toString());
+			valores.put("ano", maquina.getAno().toString());
+			valores.put("placa", maquina.getPlaca().toString());
+			valores.put("proprietario", maquina.getProprietario().toString());
+			valores.put("contratante", maquina.getContratante().toString());
+			
+			String[] args = new String[]{Long.toString(maquina.getId())};
 
 			getWritableDatabase().update(TABELA, valores, "id=?", args);
 
-			Log.i(TAG_I, "Paciente atualizado: "+ paciente.getNome());
+			Log.i(TAG_I, "Paciente atualizado: "+ maquina.getModelo());
 
 		}
 		
 
-		public List<PacienteBean> recuperarRegistros(){
+		public List<FrotaRealBean> recuperarRegistros(){
 
-			List<PacienteBean> listaPacientes = new ArrayList<PacienteBean>();
+			List<FrotaRealBean> listaMaquinas = new ArrayList<FrotaRealBean>();
 
-			String sql = "Select * from pacientes";
+			String sql = "Select * from frota";
 
 			Cursor cursor = getReadableDatabase().rawQuery(sql, null);
 
 			try{
 				while(cursor.moveToNext()){
 
-					PacienteBean paciente = new PacienteBean();
+					FrotaRealBean maquina = new FrotaRealBean();
 
-					paciente.setId(cursor.getLong(0));
-					paciente.setNome(cursor.getString(1));
-					paciente.setPressao(cursor.getString(2));
-					paciente.setLeito(cursor.getString(3));
-					paciente.setBPM(cursor.getString(4));
-					paciente.setTemperatura(cursor.getString(5));
-					paciente.setMotivoInternacao(cursor.getString(6));
-					paciente.setTipoSanguineo(cursor.getString(7));
-					paciente.setEndereco(cursor.getString(8));
-					paciente.setCelular(cursor.getString(9));
-					paciente.setTelefoneRes(cursor.getString(10));
-					paciente.setEnderecoEle(cursor.getString(11));
-					paciente.setContatoUrg(cursor.getString(12));
+					maquina.setId(cursor.getLong(0));
+					maquina.setModelo(cursor.getString(1));
+					maquina.setAno(cursor.getString(2));
+					maquina.setPlaca(cursor.getString(3));
+					maquina.setProprietario(cursor.getString(4));
+					maquina.setContratante(cursor.getString(5));
+					maquina.setKminicial(cursor.getString(6));
+					maquina.setUltimatrocaoil(cursor.getString(7));
+					maquina.setProximatrocaoil(cursor.getString(8));
+					maquina.setUltimafiltro(cursor.getString(9));
+					maquina.setProximafiltro(cursor.getString(10));
+					maquina.setUltimafreio(cursor.getString(11));
+					maquina.setProximafreio(cursor.getString(13));
+					maquina.setUltimamangueira(cursor.getString(14));
+					maquina.setProximamangueira(cursor.getString(15));
+					maquina.setUltimageral(cursor.getString(16));
+					maquina.setProximageral(cursor.getString(17));
+					maquina.setUltimapneu(cursor.getString(18));
+					maquina.setProximapneu(cursor.getString(19));
+					maquina.setNomeoperador(cursor.getString(20));
 
-					listaPacientes.add(paciente);
+					listaMaquinas.add(maquina);
 					cursor.close();
 				}
 			}catch(SQLException sqle){
@@ -164,20 +179,17 @@ public class FrotaRealDAO extends SQLiteOpenHelper {
 				cursor.close();
 			}
 
-			return listaPacientes;
+			return listaMaquinas;
 		}
 		
 		
 
-		public void removerRegistroPaciente(PacienteBean paciente){
-			String [] args = {paciente.getId().toString()};
+		public void removerRegistroMaquina(FrotaRealBean maquina){
+			String [] args = {maquina.getId().toString()};
 
 			getWritableDatabase().delete(TABELA, "id=?", args);
 
-			Log.i(TAG_R, "Paciente removido: "+ paciente.getNome());
+			Log.i(TAG_R, "Maquina removida: "+ maquina.getModelo());
 		}
-
-	}
-
 
 }
