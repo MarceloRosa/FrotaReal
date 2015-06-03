@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Frota Real</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="Botao_Cadastrar">Cadastrar Equipamentos</string>
+    <string name="Botao_Listar">Listar Equipamento</string>
+    <string name="Rodape">Versão 01 Beta</string>
+    <string name="title_activity_tela_cadastro">Cadastrar Equipamento</string>
+    <string name="modeloEquip">Modelo do equipamento:</string>
+    <string name="AnoF">Ano de fabricação:</string>
+    <string name="IdentificacaoPlacas">Número de identificação/placa:</string>
+    <string name="Proprietarios">Proprietário:</string>
+    <string name="NomeObraContratante">Nome da obra/Contratante:</string>
+    <string name="KMH">Quilômetros/Horas de utilização:</string>
+    <string name="KMHora:">Quilômetros/Horas de utilização:</string>
+    <string name="title_activity_dados_para_manutencao">Dados Para Manutenção</string>
+    <string name="UltimaTrocaOEF">Última troca de óleo e filtro de óleo:</string>
+    <string name="ProximaTrocaOleofiltro">QTD KM/H p/ próxima troca o/f:</string>
+    <string name="UltimatrocaFilroAC">Última troca de filtro AC:</string>
+    <string name="ProximaTrocaFiltroAC">QTD KM/H p/ próxima troca filtro AC:</string>
+    <string name="UltimatrocaFreio">Última troca freios:</string>
+    <string name="BotaoVoltar">Voltar</string>
+    <string name="BotaoProxima">Próxima</string>
+    <string name="title_activity_dados_para_manutencao2">Dados Para Manutenção</string>
+    <string name="ProximaTrocaFreio">QTD KM/H p/ próxima troca freio:</string>
+    <string name="UltimatrocaMangueira">Última troca mangueiras hidráulicas:</string>
+    <string name="ProximaTrocaMangueira">QTD KM/H p/ próxima troca mangueiras:</string>
+    <string name="UltimaRevisaoGeral">Última revisão geral:</string>
+    <string name="ProximaRevisaoG">QTD KM/H p/ próxima revisão geral:</string>
+    <string name="UltimatrocaPneu">Última troca de pneus:</string>
+    <string name="title_activity_dados_para_manutencao3">Dados Para Manutencao</string>
+    <string name="ProximaTrocaPneu">QTD KM/H p/ próxima troca pneus:</string>
+    <string name="NomeOperador">Nome do operador/motorista:</string>
+    <string name="title_activity_relatorio_manutencao">Relatório de Manutenção</string>
+    <string name="title_activity_lista_equipamentos">Lista de Equipamentos</string>
+
+</resources>
