@@ -11,6 +11,7 @@ package com.example.frotareal.Helper;
 
 import android.widget.Button;
 import android.widget.EditText;
+
 import com.example.frotareal.atividades.*;
 import com.example.frotareal.bean.FrotaRealBean;
 import com.example.frotareal.R;
@@ -19,141 +20,175 @@ import com.example.frotareal.R;
 public class EdicaoHelper {
 
 	
-	private EditText editTextPnome;
-	private EditText editTextPpressao;
-	private EditText editTextPleito;
-	private EditText editTextPbpm;
-	private EditText editTextPtemperatura;
-	private EditText editTextPintern;
-	private EditText editTextPsangue;
+	private EditText editTextModeloE;
+	private EditText editTextAnoFab;
+	private EditText editTextPlaca;
+	private EditText editTextProprietario;
+	private EditText editTextObraContrat;
 	
-	public Button botaoAtualizar;
+	public Button buttonTelaAlteraCadastro;
 	private Long Idp;
 
-	private PacienteBean paciente ;
+	private FrotaRealBean maquina ;
 
-	public EdicaoHelper(PacienteAtividade atividade,PacienteBean extras){
+	public EdicaoHelper(TelaAlteraCadastro atividade,FrotaRealBean extras){
 
-		this.editTextPnome = (EditText) atividade.findViewById(R.id.editTextPnome);
-		this.editTextPpressao = (EditText) atividade.findViewById(R.id.editTextPpressao);
-		this.editTextPleito = (EditText) atividade.findViewById(R.id.editTextPleito);
-		this.editTextPbpm = (EditText) atividade.findViewById(R.id.editTextPbpm);
-		this.editTextPtemperatura = (EditText) atividade.findViewById(R.id.editTextPtemp);
-		this.editTextPintern = (EditText) atividade.findViewById(R.id.editTextPintern);
-		this.editTextPsangue = (EditText) atividade.findViewById(R.id.editTextPsangue);
-		this.botaoAtualizar = (Button) atividade.findViewById(R.id.buttonUpd);
-		
-		
+		this.editTextModeloE = (EditText) atividade.findViewById(R.id.editTextModeloE);
+		this.editTextAnoFab = (EditText) atividade.findViewById(R.id.editTextAnoFab);
+		this.editTextPlaca = (EditText) atividade.findViewById(R.id.editTextPlaca);
+		this.editTextProprietario = (EditText) atividade.findViewById(R.id.editTextProprietario);
+		this.editTextObraContrat = (EditText) atividade.findViewById(R.id.editTextObraContrat);		
+		this.buttonTelaAlteraCadastro = (Button) atividade.findViewById(R.id.buttonTelaAlteraCadastro);
 		
 
 		Idp = extras.getId();
-		editTextPnome.setText(extras.getNome());
-		editTextPpressao.setText(extras.getTemperatura());
-		editTextPleito.setText(extras.getBPM());
-		editTextPbpm.setText(extras.getLeito());
-		editTextPtemperatura.setText(extras.getPressao());
-		editTextPintern.setText(extras.getSanguineo());
-		editTextPsangue.setText(extras.getMotivoInternacao());
-		
+		editTextModeloE.setText(extras.getModelo());
+		editTextAnoFab.setText(extras.getAno());
+		editTextPlaca.setText(extras.getPlaca());
+		editTextProprietario.setText(extras.getProprietario());
+		editTextObraContrat.setText(extras.getContratante());
 
-		paciente = this.getPaciente();
+		maquina = this.getMaquina();
 
 	}
 	
 
-	public PacienteBean getPaciente() {
+	public FrotaRealBean getMaquina() {
 
-		PacienteBean paciente = new PacienteBean();
+		FrotaRealBean maquina = new FrotaRealBean();
 
-		paciente.setId(Idp);
-		paciente.setNome(editTextPnome.getText().toString());
-		paciente.setPressao(editTextPpressao.getText().toString());
-		paciente.setLeito(editTextPleito.getText().toString());
-		paciente.setBPM(editTextPbpm.getText().toString());
-		paciente.setTemperatura(editTextPtemperatura.getText().toString());
-		paciente.setMotivoInternacao(editTextPintern.getText().toString());
-		paciente.setTipoSanguineo(editTextPsangue.getText().toString());
+		maquina.setId(Idp);
+		maquina.setModelo(editTextModeloE.getText().toString());
+		maquina.setAno(editTextAnoFab.getText().toString());
+		maquina.setPlaca(editTextPlaca.getText().toString());
+		maquina.setProprietario(editTextProprietario.getText().toString());
+		maquina.setContratante(editTextObraContrat.getText().toString());
 		
 		
-		return paciente;
-	}
-	
-	public EditText getEditTextPnome() {
-		return editTextPnome;
+		return maquina;
 	}
 
-	public void setEditTextPnome(EditText editTextPnome) {
-		this.editTextPnome = editTextPnome;
+
+	/**
+	 * @return the editTextModeloE
+	 */
+	public EditText getEditTextModeloE() {
+		return editTextModeloE;
 	}
 
-	public EditText getEditTextPpressao() {
-		return editTextPpressao;
+
+	/**
+	 * @param editTextModeloE the editTextModeloE to set
+	 */
+	public void setEditTextModeloE(EditText editTextModeloE) {
+		this.editTextModeloE = editTextModeloE;
 	}
 
-	public void setEditTextPpressao(EditText editTextPpressao) {
-		this.editTextPpressao = editTextPpressao;
+
+	/**
+	 * @return the editTextAnoFab
+	 */
+	public EditText getEditTextAnoFab() {
+		return editTextAnoFab;
 	}
 
-	public EditText getEditTextPleito() {
-		return editTextPleito;
+
+	/**
+	 * @param editTextAnoFab the editTextAnoFab to set
+	 */
+	public void setEditTextAnoFab(EditText editTextAnoFab) {
+		this.editTextAnoFab = editTextAnoFab;
 	}
 
-	public void setEditTextPleito(EditText editTextPleito) {
-		this.editTextPleito = editTextPleito;
+
+	/**
+	 * @return the editTextPlaca
+	 */
+	public EditText getEditTextPlaca() {
+		return editTextPlaca;
 	}
 
-	public EditText getEditTextPbpm() {
-		return editTextPbpm;
+
+	/**
+	 * @param editTextPlaca the editTextPlaca to set
+	 */
+	public void setEditTextPlaca(EditText editTextPlaca) {
+		this.editTextPlaca = editTextPlaca;
 	}
 
-	public void setEditTextPbpm(EditText editTextPbpm) {
-		this.editTextPbpm = editTextPbpm;
+
+	/**
+	 * @return the editTextProprietario
+	 */
+	public EditText getEditTextProprietario() {
+		return editTextProprietario;
 	}
 
-	public EditText getEditTextPtemperatura() {
-		return editTextPtemperatura;
+
+	/**
+	 * @param editTextProprietario the editTextProprietario to set
+	 */
+	public void setEditTextProprietario(EditText editTextProprietario) {
+		this.editTextProprietario = editTextProprietario;
 	}
 
-	public void setEditTextPtemperatura(EditText editTextPtemperatura) {
-		this.editTextPtemperatura = editTextPtemperatura;
+
+	/**
+	 * @return the editTextObraContrat
+	 */
+	public EditText getEditTextObraContrat() {
+		return editTextObraContrat;
 	}
 
-	public EditText getEditTextPintern() {
-		return editTextPintern;
+
+	/**
+	 * @param editTextObraContrat the editTextObraContrat to set
+	 */
+	public void setEditTextObraContrat(EditText editTextObraContrat) {
+		this.editTextObraContrat = editTextObraContrat;
 	}
 
-	public void setEditTextPintern(EditText editTextPintern) {
-		this.editTextPintern = editTextPintern;
+
+	/**
+	 * @return the buttonTelaAlteraCadastro
+	 */
+	public Button getButtonTelaAlteraCadastro() {
+		return buttonTelaAlteraCadastro;
 	}
 
-	public EditText getEditTextPsangue() {
-		return editTextPsangue;
+
+	/**
+	 * @param buttonTelaAlteraCadastro the buttonTelaAlteraCadastro to set
+	 */
+	public void setButtonTelaAlteraCadastro(Button buttonTelaAlteraCadastro) {
+		this.buttonTelaAlteraCadastro = buttonTelaAlteraCadastro;
 	}
 
-	public void setEditTextPsangue(EditText editTextPsangue) {
-		this.editTextPsangue = editTextPsangue;
-	}
 
-	public Button getBotaoAtualizar() {
-		return botaoAtualizar;
-	}
-
-	public void setBotaoAtualizar(Button botaoAtualizar) {
-		this.botaoAtualizar = botaoAtualizar;
-	}
-
+	/**
+	 * @return the idp
+	 */
 	public Long getIdp() {
 		return Idp;
 	}
 
+
+	/**
+	 * @param idp the idp to set
+	 */
 	public void setIdp(Long idp) {
 		Idp = idp;
 	}
 
-	public void setPaciente(PacienteBean paciente) {
-		this.paciente = paciente;
-	}
 
-}
+	/**
+	 * @param maquina the maquina to set
+	 */
+	public void setMaquina(FrotaRealBean maquina) {
+		this.maquina = maquina;
+	}
+	
+	
+
 
 }

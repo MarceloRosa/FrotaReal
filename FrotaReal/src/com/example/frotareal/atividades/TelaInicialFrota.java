@@ -1,18 +1,49 @@
 package com.example.frotareal.atividades;
 
 import com.example.frotareal.R;
-
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class TelaInicialFrota extends Activity {
+	
+	private Button botaoCadastrar;
+	private Button botaoListar;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_inicial_frota);
+		
+		this.botaoCadastrar = (Button) findViewById(R.id.buttonCadastrar);
+		this.botaoListar = (Button) findViewById(R.id.buttonListarEquipamento);
+		
+		botaoCadastrar.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				
+				Intent intent =  new Intent(TelaInicialFrota.this,TeladCadastro.class);
+				startActivity(intent);
+			}
+		});
+		
+		botaoListar.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent =  new Intent(TelaInicialFrota.this,ListaEquipamentos.class);
+				startActivity(intent);
+			}
+		});
+				
+		
 	}
 
 	@Override

@@ -35,5 +35,6 @@
     <string name="NomeOperador">Nome do operador/motorista:</string>
     <string name="title_activity_relatorio_manutencao">Relatório de Manutenção</string>
     <string name="title_activity_lista_equipamentos">Lista de Equipamentos</string>
+    <string name="title_activity_tela_altera_cadastro">Alterar Cadastro</string>
 
 </resources>
