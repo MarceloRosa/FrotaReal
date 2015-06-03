@@ -78,7 +78,7 @@
         android:text="@string/BotaoVoltar" />
 
     <Button
-        android:id="@+id/Button02"
+        android:id="@+id/buttonProximoManutencao2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/TextView01"
@@ -190,11 +190,11 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/imageView1"
         android:layout_below="@+id/editTextProximRevisaoG"
-        android:text="@string/UltimatrocaPneu"
+        android:text="@string/NomeOperador"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
-        android:id="@+id/editTextUltimaTrocaPneu"
+        android:id="@+id/editTextNomeOperado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/imageView1"

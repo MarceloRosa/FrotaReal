@@ -16,6 +16,8 @@ public class FrotaRealBean implements Parcelable {
 		private String kminicial;
 		private String ultimatrocaoil;
 		private String proximatrocaoil;
+		private String ultimatrocaac;
+		private String proximatrocaac;
 		private String ultimafiltro;		
 		private String proximafiltro;
 		private String ultimafreio;		
@@ -46,6 +48,8 @@ public class FrotaRealBean implements Parcelable {
 			kminicial = in.readString();
 			ultimatrocaoil = in.readString();
 			proximatrocaoil = in.readString();
+			ultimatrocaac = in.readString();
+			proximatrocaac = in.readString();
 			ultimafiltro = in.readString();
 			proximafiltro = in.readString();
 			ultimafreio = in.readString();
@@ -63,6 +67,32 @@ public class FrotaRealBean implements Parcelable {
 		public String toString() {
 			return "Modelo:" + this.modelo +" Placa:" + this.placa ;
 		}
+		/**
+		 * @return the ultimatrocaac
+		 */
+		public String getUltimatrocaac() {
+			return ultimatrocaac;
+		}
+		/**
+		 * @param ultimatrocaac the ultimatrocaac to set
+		 */
+		public void setUltimatrocaac(String ultimatrocaac) {
+			this.ultimatrocaac = ultimatrocaac;
+		}
+		/**
+		 * @return the proximatrocaac
+		 */
+		public String getProximatrocaac() {
+			return proximatrocaac;
+		}
+
+		/**
+		 * @param proximatrocaac the proximatrocaac to set
+		 */
+		public void setProximatrocaac(String proximatrocaac) {
+			this.proximatrocaac = proximatrocaac;
+		}
+
 		@Override
 		public int describeContents() {
 			// TODO Auto-generated method stub
@@ -366,6 +396,8 @@ public class FrotaRealBean implements Parcelable {
 			dest.writeString(kminicial);
 			dest.writeString(ultimatrocaoil);
 			dest.writeString(proximatrocaoil);
+			dest.writeString(ultimatrocaac);
+			dest.writeString(proximatrocaac);
 			dest.writeString(ultimafiltro);
 			dest.writeString(proximafiltro);
 			dest.writeString(ultimafreio);

@@ -52,7 +52,7 @@
         android:text="@string/BotaoVoltar" />
 
     <Button
-        android:id="@+id/Button02"
+        android:id="@+id/buttonProximoManutencao3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/TextView01"
@@ -69,46 +69,5 @@
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/imageView1"
         android:progress="100" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_below="@+id/ProgressBar01"
-        android:text="@string/ProximaTrocaPneu"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <EditText
-        android:id="@+id/editTextProximaTrocaPneus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_alignRight="@+id/imageView1"
-        android:layout_below="@+id/textView1"
-        android:ems="10"
-        android:inputType="number" >
-
-        <requestFocus />
-    </EditText>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_below="@+id/editTextProximaTrocaPneus"
-        android:text="@string/NomeOperador"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <EditText
-        android:id="@+id/editTextNomeOperado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_alignRight="@+id/imageView1"
-        android:layout_below="@+id/textView2"
-        android:ems="10"
-        android:inputType="textPersonName" />
 
 </RelativeLayout>
