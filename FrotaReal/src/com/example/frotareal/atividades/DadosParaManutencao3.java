@@ -39,15 +39,15 @@ public class DadosParaManutencao3 extends FragmentActivity {
 		GoogleMapOptions options = new GoogleMapOptions();
 		options.zOrderOnTop(true);
 		
-		/*mapFrag = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.fragment1);
+		mapFrag = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.fragment1);
 		
-		map = mapFrag.getMap();*/
+		map = mapFrag.getMap();
 		
-		mapFrag = SupportMapFragment.newInstance(options);
+		/*mapFrag = SupportMapFragment.newInstance(options);
 		
 		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 		ft.replace(R.id.fragment1, mapFrag);
-		ft.commit();
+		ft.commit();*/
 		
 		configMap();
 	}
