@@ -30,7 +30,7 @@ public class TelaAlteraCadastro extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_altera_cadastro);
 		
-		FrotaRealBean frotarealBean = getIntent().getParcelableExtra("modelo");
+		/*FrotaRealBean frotarealBean = getIntent().getParcelableExtra("modelo");
 
 		edicaoHelper =  new EdicaoHelper(this,frotarealBean);
 		edicaoHelper.getButtonTelaAlteraCadastro().setOnClickListener(new OnClickListener() {
@@ -44,7 +44,7 @@ public class TelaAlteraCadastro extends Activity {
 				frotaRealDAO.close();
 				finish();
 			}
-		});
+		});*/
 	}
 
 	

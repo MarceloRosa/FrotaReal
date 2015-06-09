@@ -38,7 +38,7 @@ public class DadosParaManutencao extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dados_para_manutencao);
 		
-		FrotaRealBean frotarealBean = getIntent().getParcelableExtra("modelo");
+		/*FrotaRealBean frotarealBean = getIntent().getParcelableExtra("modelo");
 
 		manutencaoHelper = new ManutencaoHelper(this,frotarealBean);
 		manutencaoHelper.getButtonProximoManutencao1().setOnClickListener(new OnClickListener() {
@@ -73,7 +73,7 @@ public class DadosParaManutencao extends Activity {
 	
 				
 			}
-		});
+		});*/
 	}
 	
 	

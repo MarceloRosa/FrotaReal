@@ -32,7 +32,7 @@ public class TeladCadastro extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_telad_cadastro);
-		registroHelper =  new RegistroHelper(this);
+		/*registroHelper =  new RegistroHelper(this);
 		buttonTeladCadastro = (Button) findViewById(R.id.buttonTeladCadastro);
 		buttonTeladCadastro.setOnClickListener(new OnClickListener() {
 			
@@ -46,7 +46,7 @@ public class TeladCadastro extends Activity {
 			
 		}
 	});
-	
+	*/
 			
 		
 	}

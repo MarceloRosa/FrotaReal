@@ -191,7 +191,7 @@ public class ListaEquipamentos extends Activity {
 	}
 	public void atualizarRegistroMaquina(Intent intent){
 
-		intent = new Intent(ListaEquipamentos.this, DadosParaManutencao3.class);
+		intent = new Intent(ListaEquipamentos.this, DadosParaManutencao.class);
 		Parcelable parceable = (Parcelable) this.maquinaSelecionada;
 		
 		//verificar modelo
