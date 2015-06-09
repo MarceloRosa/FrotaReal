@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+	  xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.example.frotareal.atividades.ListaEquipamentos" >
+    <item android:id="@+id/itemRemoverMaquina" android:title="@string/remover_maquina"></item><item android:id="@+id/itemRelatorioManutencao" android:title="@string/item_relatorio"></item>
+    <item android:id="@+id/itemAtualizar" android:title="@string/item_atualizar"></item>
+    <item android:id="@+id/itemCancelar" android:title="@string/item_cancelar"></item>
+    
+    
+
+ 
+    
+    
+
+</menu>
