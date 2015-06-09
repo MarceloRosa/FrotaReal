@@ -11,7 +11,7 @@
     <ListView
         android:id="@+id/Listagem"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:layout_above="@+id/TextView01"
         android:drawSelectorOnTop="false" >
 

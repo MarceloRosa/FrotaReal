@@ -191,6 +191,8 @@ public class FrotaRealDAO extends SQLiteOpenHelper {
 		+")"
 		+" VALUES('Retro escavadeira','2012','OCG 1110','Marcelo','Adois Construções','20000','10000','10000','10000','10000','10000','5000')"
 		+",('Pá mecânica','2015','ABC 123','Fernando','Pirilampo','20000','10000','10000','10000','10000','10000','5000')"
+		+",('Pá mecânica2','2015','ABC 222','Fernando','Pirilampo','20000','10000','10000','10000','10000','10000','5000')"
+		+",('Pá mecânica2','2015','ABC 333','Fernando','Pirilampo','20000','10000','10000','10000','10000','10000','5000')"
 		;       
 		//Executa a Query de INSERT
 		db.execSQL(sql);
