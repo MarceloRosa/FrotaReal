@@ -61,7 +61,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
-        android:id="@+id/editText11111ModeloE"
+        android:id="@+id/editTextModeloE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/imageView1"
@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/imageView1"
-        android:layout_below="@+id/editText11111ModeloE"
+        android:layout_below="@+id/editTextModeloE"
         android:text="@string/AnoF"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 

@@ -38,8 +38,8 @@ public class FrotaRealDAO extends SQLiteOpenHelper {
 			String sql = "CREATE TABLE " + TABELA 
 					+ "('id' INTEGER PRIMARY KEY NOT NULL , "
 					+ "'modelo' TEXT NOT NULL"
-					+ ",'ano' TEXT NOT NULL"
-					+ ",'placa' TEXT NOT NULL "
+					+ ", 'ano' TEXT NOT NULL"
+					+ ", 'placa' TEXT NOT NULL "
 					+ ",'proprietario' TEXT NOT NULL"
 					+ ",'contratante' TEXT NOT NULL"
 					+ ",'kminicial' TEXT NOT NULL"
