@@ -1,6 +1,8 @@
 package com.example.frotareal.atividades;
 
 import com.example.frotareal.R;
+import com.example.frotareal.DAO.FrotaRealDAO;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +22,8 @@ public class TelaInicialFrota extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_inicial_frota);
+		
+		
 		
 		this.botaoCadastrar = (Button) findViewById(R.id.buttonCadastrar);
 		this.botaoListar = (Button) findViewById(R.id.buttonListarEquipamento);

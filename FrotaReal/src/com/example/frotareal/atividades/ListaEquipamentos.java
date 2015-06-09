@@ -47,9 +47,9 @@ public class ListaEquipamentos extends Activity {
 		// Recupera a instancia por meio da classe R.java
 				// Associa o ListView com o item definido no layout.xml
 				ListViewMaquinas =  (ListView) findViewById(R.id.Listagem);
-				// Recupera a instancia de PacienteDAO
+				// Recupera a instancia de FrotaRealDAO
 				FrotaRealDAO frotarealDAO =  new FrotaRealDAO(ListaEquipamentos.this);
-				// Recupera a lista de PacientesBean que foi recupera do registo
+				// Recupera a lista de FrotaRealBean que foi recupera do registo
 				// do banco de dados SQLite
 				listaMaquinasBean = frotarealDAO.recuperarRegistros();
 

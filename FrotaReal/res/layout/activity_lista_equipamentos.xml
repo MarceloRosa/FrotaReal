@@ -12,7 +12,7 @@
         android:id="@+id/Listagem"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageView2"
+        android:layout_above="@+id/TextView01"
         android:drawSelectorOnTop="true" >
 
     </ListView>
@@ -27,14 +27,6 @@
         android:layout_centerHorizontal="true"
         android:text="@string/Rodape"
         android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/TextView01"
-        android:layout_alignLeft="@+id/Listagem"
-        android:src="@drawable/maquinanovo" />
 
     
 

@@ -43,21 +43,12 @@ public class FrotaRealDAO extends SQLiteOpenHelper {
 					+ ",'proprietario' TEXT"
 					+ ",'contratante' TEXT"
 					+ ",'kminicial' TEXT"
-					+ ",'ultimatrocaoil' TEXT"
-					+ ",'proximatrocaoil' TEXT"
-					+ ",'ultimatrocaac' TEXT"
-					+ ",'proximatrocaac' TEXT"
-					+ ",'ultimafiltro' TEXT"
-					+ ",'proximafiltro' TEXT"
-					+ ",'ultimafreio' TEXT"
-					+ ",'proximafreio' TEXT"
-					+ ",'ultimamangueira' TEXT"
-					+ ",'proximamangueira' TEXT"
-					+ ",'ultimageral' TEXT"
-					+ ",'proximageral' TEXT"
-					+ ",'ultimapneu' TEXT"
-					+ ",'proximapneu' TEXT"
-					+ ",'nomeoperador' TEXT)";
+					+ ",'ultimatrocaoil' TEXT"					
+					+ ",'ultimatrocaac' TEXT"					
+					+ ",'ultimafiltro' TEXT"					
+					+ ",'ultimafreio' TEXT"					
+					+ ",'ultimamangueira' TEXT"					
+					+ ",'ultimageral' TEXT)";
 			db.execSQL(sql);
 			carregaDados(db);
 		}
@@ -93,23 +84,12 @@ public class FrotaRealDAO extends SQLiteOpenHelper {
 			
 			valores.put("modelo", maquina.getModelo().toString());
 			valores.put("kminicial",maquina.getKminicial().toString());
-			valores.put("ultimatrocaoil",maquina.getUltimatrocaoil().toString());
-			valores.put("proximatrocaoil",maquina.getProximatrocaoil().toString());
-			valores.put("ultimatrocaac",maquina.getUltimatrocaac().toString());
-			valores.put("proximatrocaac",maquina.getProximatrocaac().toString());
-			valores.put("ultimafiltro",maquina.getUltimafiltro().toString());
-			valores.put("proximafiltro",maquina.getProximafiltro().toString());
-			valores.put("ultimafreio",maquina.getUltimafreio().toString());
-			valores.put("proximafreio",maquina.getProximafreio().toString());
-			valores.put("ultimamangueira",maquina.getUltimamangueira().toString());
-			valores.put("proximamangueira",maquina.getProximamangueira().toString());
+			valores.put("ultimatrocaoil",maquina.getUltimatrocaoil().toString());			
+			valores.put("ultimatrocaac",maquina.getUltimatrocaac().toString());			
+			valores.put("ultimafiltro",maquina.getUltimafiltro().toString());			
+			valores.put("ultimafreio",maquina.getUltimafreio().toString());			
+			valores.put("ultimamangueira",maquina.getUltimamangueira().toString());			
 			valores.put("ultimageral",maquina.getUltimageral().toString());
-			valores.put("proximageral",maquina.getProximageral().toString());
-			valores.put("ultimapneu",maquina.getUltimapneu().toString());
-			valores.put("proximapneu",maquina.getProximapneu().toString());
-			valores.put("nomeoperador",maquina.getNomeoperador().toString());
-
-
 
 
 			String[] args = new String[]{Long.toString(maquina.getId())};
@@ -164,24 +144,14 @@ public class FrotaRealDAO extends SQLiteOpenHelper {
 					maquina.setContratante(cursor.getString(5));
 					maquina.setKminicial(cursor.getString(6));
 					maquina.setUltimatrocaoil(cursor.getString(7));
-					maquina.setProximatrocaoil(cursor.getString(8));
-					maquina.setUltimatrocaac(cursor.getString(9));
-					maquina.setProximatrocaac(cursor.getString(10));
+					maquina.setUltimatrocaac(cursor.getString(8));					
+					maquina.setUltimafiltro(cursor.getString(9));					
+					maquina.setUltimafreio(cursor.getString(10));					
+					maquina.setUltimamangueira(cursor.getString(11));					
+					maquina.setUltimageral(cursor.getString(12));				
 					
-					maquina.setUltimafiltro(cursor.getString(11));
-					maquina.setProximafiltro(cursor.getString(12));
-					maquina.setUltimafreio(cursor.getString(13));
-					maquina.setProximafreio(cursor.getString(14));
-					maquina.setUltimamangueira(cursor.getString(15));
-					maquina.setProximamangueira(cursor.getString(16));
-					maquina.setUltimageral(cursor.getString(17));
-					maquina.setProximageral(cursor.getString(18));
-					maquina.setUltimapneu(cursor.getString(19));
-					maquina.setProximapneu(cursor.getString(20));
-					maquina.setNomeoperador(cursor.getString(21));
-
 					listaMaquinas.add(maquina);
-					cursor.close();
+					//cursor.close();
 				}
 			}catch(SQLException sqle){
 				Log.e(TAG_L, sqle.getMessage());
@@ -201,19 +171,26 @@ public class FrotaRealDAO extends SQLiteOpenHelper {
 
 			Log.i(TAG_R, "Maquina removida: "+ maquina.getModelo());
 		}
-		public void carregaDados(SQLiteDatabase db)
-		{
+		
+		public void carregaDados(SQLiteDatabase db){
 		//Query de INSERT com os dados iniciais a serem carregados para o Banco de Dados
 		String sql = "INSERT INTO "+TABELA
 		+" ("
-		+"modelo,"
-		+" ano,"
-		+" placa,"
-		+" proprietario,"
-		+" contratante"
+		+ " modelo"
+		+ ",ano"
+		+ ",placa "
+		+ ",proprietario "
+		+ ",contratante "
+		+ ",kminicial "
+		+ ",ultimatrocaoil "					
+		+ ",ultimatrocaac "					
+		+ ",ultimafiltro "					
+		+ ",ultimafreio "					
+		+ ",ultimamangueira"					
+		+ ",ultimageral"		
 		+")"
-		+" VALUES('Retro escavadeira','2012','OCG 1110','Marcelo','Adois Construções')"
-		+",('Pá mecânica','2015','ABC 123','Fernando','Pirilampo')"
+		+" VALUES('Retro escavadeira','2012','OCG 1110','Marcelo','Adois Construções','20000','10000','10000','10000','10000','10000','5000')"
+		+",('Pá mecânica','2015','ABC 123','Fernando','Pirilampo','20000','10000','10000','10000','10000','10000','5000')"
 		;       
 		//Executa a Query de INSERT
 		db.execSQL(sql);
