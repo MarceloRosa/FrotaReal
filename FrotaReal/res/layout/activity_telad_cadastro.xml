@@ -65,6 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignRight="@+id/imageView1"
         android:layout_below="@+id/textView2"
         android:ems="10" >
 
@@ -85,6 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignRight="@+id/imageView1"
         android:layout_below="@+id/textView3"
         android:ems="10"
         android:inputType="date" />
@@ -103,6 +105,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignRight="@+id/imageView1"
         android:layout_below="@+id/textView4"
         android:ems="10"
         android:inputType="number" />
@@ -121,6 +124,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignRight="@+id/imageView1"
         android:layout_below="@+id/textView5"
         android:ems="10"
         android:inputType="textPersonName" />
@@ -139,6 +143,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignRight="@+id/imageView1"
         android:layout_below="@+id/textView6"
         android:ems="10" />
 

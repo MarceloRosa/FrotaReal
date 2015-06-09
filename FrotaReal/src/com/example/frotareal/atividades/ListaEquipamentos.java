@@ -1,6 +1,7 @@
 package com.example.frotareal.atividades;
 
 import java.util.List;
+
 import com.example.frotareal.R;
 import com.example.frotareal.DAO.FrotaRealDAO;
 import com.example.frotareal.bean.FrotaRealBean;
@@ -13,9 +14,11 @@ import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
+import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -72,7 +75,7 @@ public class ListaEquipamentos extends Activity {
 						@Override
 						public void onItemClick(AdapterView<?> parent, View view,
 								int position, long id) {
-							Intent intent = new Intent(ListaEquipamentos.this, TelaInicialFrota.class);
+							Intent intent = new Intent(ListaEquipamentos.this, TelaAlteraCadastro.class);
 							Parcelable parceable = (Parcelable) ListViewMaquinas.getItemAtPosition(position);
 							
 							//verificar se é modelo mesmo abaixo tb
@@ -95,12 +98,12 @@ public class ListaEquipamentos extends Activity {
 				}
 		
 	}
-
+	
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.lista_equipamentos, menu);
-		return true;
+	public void onCreateContextMenu(ContextMenu menu, View view, ContextMenuInfo menuInfo){
+		super.onCreateContextMenu(menu, view, menuInfo);
+		getMenuInflater().inflate(R.menu.menu_contexto, menu);
+
 	}
 	
 	public boolean onContextItemSelected(MenuItem item){
@@ -134,6 +137,12 @@ public class ListaEquipamentos extends Activity {
 			break;
 		}
 		return super.onContextItemSelected(item);
+	}
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.lista_equipamentos, menu);
+		return true;
 	}
 
 

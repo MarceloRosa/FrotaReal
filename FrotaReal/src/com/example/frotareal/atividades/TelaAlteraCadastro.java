@@ -21,7 +21,8 @@ public class TelaAlteraCadastro extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_tela_altera_cadastro);
-		FrotaRealBean frotarealBean = getIntent().getParcelableExtra("maquina");
+		
+		FrotaRealBean frotarealBean = getIntent().getParcelableExtra("modelo");
 
 		edicaoHelper =  new EdicaoHelper(this,frotarealBean);
 		edicaoHelper.getButtonTelaAlteraCadastro().setOnClickListener(new OnClickListener() {

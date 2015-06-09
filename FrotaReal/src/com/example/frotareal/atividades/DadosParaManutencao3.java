@@ -1,18 +1,69 @@
 package com.example.frotareal.atividades;
 
 import com.example.frotareal.R;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMapOptions;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.GoogleMap.CancelableCallback;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class DadosParaManutencao3 extends Activity {
+public class DadosParaManutencao3 extends FragmentActivity {
+	
+	private SupportMapFragment mapFrag;
+	private GoogleMap map;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dados_para_manutencao3);
+		
+		GoogleMapOptions options = new GoogleMapOptions();
+		options.zOrderOnTop(true);
+		
+		/*mapFrag = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.fragment1);
+		
+		map = mapFrag.getMap();*/
+		
+		mapFrag = SupportMapFragment.newInstance(options);
+		
+		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+		ft.replace(R.id.fragment1, mapFrag);
+		ft.commit();
+		
+		configMap();
+	}
+	public void configMap(){
+		map = mapFrag.getMap();
+		map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+		
+		LatLng latLng = new LatLng(-23.564224, -46.653156);
+		
+		CameraPosition cameraPosition = new CameraPosition.Builder().target(latLng).zoom(18).bearing(0).tilt(90).build();
+		CameraUpdate update = CameraUpdateFactory.newCameraPosition(cameraPosition);
+		
+		//map.moveCamera(update);
+		map.animateCamera(update, 3000, new CancelableCallback(){
+			@Override
+			public void onCancel() {
+				Log.i("Script", "CancelableCallback.onCancel()");
+			}
+
+			@Override
+			public void onFinish() {
+				Log.i("Script", "CancelableCallback.onFinish()");
+			}
+		});
 	}
 
 	@Override

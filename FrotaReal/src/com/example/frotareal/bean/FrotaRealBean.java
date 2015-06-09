@@ -14,21 +14,13 @@ public class FrotaRealBean implements Parcelable {
 		private String proprietario;
 		private String contratante;
 		private String kminicial;
-		private String ultimatrocaoil;
-		private String proximatrocaoil;
-		private String ultimatrocaac;
-		private String proximatrocaac;
-		private String ultimafiltro;		
-		private String proximafiltro;
-		private String ultimafreio;		
-		private String proximafreio;
-		private String ultimamangueira;
-		private String proximamangueira;
-		private String ultimageral;
-		private String proximageral;
-		private String ultimapneu;
-		private String proximapneu;
-		private String nomeoperador;
+		private String ultimatrocaoil;		
+		private String ultimatrocaac;		
+		private String ultimafiltro;			
+		private String ultimafreio;				
+		private String ultimamangueira;		
+		private String ultimageral;		
+		
 
 		public FrotaRealBean() {
 			// TODO Auto-generated constructor stub
@@ -46,59 +38,17 @@ public class FrotaRealBean implements Parcelable {
 			proprietario = in.readString();
 			contratante = in.readString();
 			kminicial = in.readString();
-			ultimatrocaoil = in.readString();
-			proximatrocaoil = in.readString();
-			ultimatrocaac = in.readString();
-			proximatrocaac = in.readString();
-			ultimafiltro = in.readString();
-			proximafiltro = in.readString();
-			ultimafreio = in.readString();
-			proximafreio = in.readString();
-			ultimamangueira = in.readString();
-			proximamangueira = in.readString();
+			ultimatrocaoil = in.readString();			
+			ultimatrocaac = in.readString();			
+			ultimafiltro = in.readString();			
+			ultimafreio = in.readString();			
+			ultimamangueira = in.readString();			
 			ultimageral = in.readString();
-			proximageral = in.readString();
-			ultimapneu = in.readString();
-			proximapneu = in.readString();
-			nomeoperador = in.readString();
+			
 		}
+		
 
-				@Override
-		public String toString() {
-			return "Modelo:" + this.modelo +" Placa:" + this.placa ;
-		}
-		/**
-		 * @return the ultimatrocaac
-		 */
-		public String getUltimatrocaac() {
-			return ultimatrocaac;
-		}
-		/**
-		 * @param ultimatrocaac the ultimatrocaac to set
-		 */
-		public void setUltimatrocaac(String ultimatrocaac) {
-			this.ultimatrocaac = ultimatrocaac;
-		}
-		/**
-		 * @return the proximatrocaac
-		 */
-		public String getProximatrocaac() {
-			return proximatrocaac;
-		}
-
-		/**
-		 * @param proximatrocaac the proximatrocaac to set
-		 */
-		public void setProximatrocaac(String proximatrocaac) {
-			this.proximatrocaac = proximatrocaac;
-		}
-
-		@Override
-		public int describeContents() {
-			// TODO Auto-generated method stub
-			return 0;
-		}
-		/**
+				/**
 		 * @return the id
 		 */
 		public Long getId() {
@@ -211,17 +161,17 @@ public class FrotaRealBean implements Parcelable {
 		}
 
 		/**
-		 * @return the proximatrocaoil
+		 * @return the ultimatrocaac
 		 */
-		public String getProximatrocaoil() {
-			return proximatrocaoil;
+		public String getUltimatrocaac() {
+			return ultimatrocaac;
 		}
 
 		/**
-		 * @param proximatrocaoil the proximatrocaoil to set
+		 * @param ultimatrocaac the ultimatrocaac to set
 		 */
-		public void setProximatrocaoil(String proximatrocaoil) {
-			this.proximatrocaoil = proximatrocaoil;
+		public void setUltimatrocaac(String ultimatrocaac) {
+			this.ultimatrocaac = ultimatrocaac;
 		}
 
 		/**
@@ -239,20 +189,6 @@ public class FrotaRealBean implements Parcelable {
 		}
 
 		/**
-		 * @return the proximafiltro
-		 */
-		public String getProximafiltro() {
-			return proximafiltro;
-		}
-
-		/**
-		 * @param proximafiltro the proximafiltro to set
-		 */
-		public void setProximafiltro(String proximafiltro) {
-			this.proximafiltro = proximafiltro;
-		}
-
-		/**
 		 * @return the ultimafreio
 		 */
 		public String getUltimafreio() {
@@ -264,20 +200,6 @@ public class FrotaRealBean implements Parcelable {
 		 */
 		public void setUltimafreio(String ultimafreio) {
 			this.ultimafreio = ultimafreio;
-		}
-
-		/**
-		 * @return the proximafreio
-		 */
-		public String getProximafreio() {
-			return proximafreio;
-		}
-
-		/**
-		 * @param proximafreio the proximafreio to set
-		 */
-		public void setProximafreio(String proximafreio) {
-			this.proximafreio = proximafreio;
 		}
 
 		/**
@@ -295,20 +217,6 @@ public class FrotaRealBean implements Parcelable {
 		}
 
 		/**
-		 * @return the proximamangueira
-		 */
-		public String getProximamangueira() {
-			return proximamangueira;
-		}
-
-		/**
-		 * @param proximamangueira the proximamangueira to set
-		 */
-		public void setProximamangueira(String proximamangueira) {
-			this.proximamangueira = proximamangueira;
-		}
-
-		/**
 		 * @return the ultimageral
 		 */
 		public String getUltimageral() {
@@ -322,61 +230,17 @@ public class FrotaRealBean implements Parcelable {
 			this.ultimageral = ultimageral;
 		}
 
-		/**
-		 * @return the proximageral
-		 */
-		public String getProximageral() {
-			return proximageral;
+				@Override
+		public String toString() {
+			return "Modelo:" + this.modelo +" Placa:" + this.placa ;
 		}
-
-		/**
-		 * @param proximageral the proximageral to set
-		 */
-		public void setProximageral(String proximageral) {
-			this.proximageral = proximageral;
+		
+		@Override
+		public int describeContents() {
+			// TODO Auto-generated method stub
+			return 0;
 		}
-
-		/**
-		 * @return the ultimapneu
-		 */
-		public String getUltimapneu() {
-			return ultimapneu;
-		}
-
-		/**
-		 * @param ultimapneu the ultimapneu to set
-		 */
-		public void setUltimapneu(String ultimapneu) {
-			this.ultimapneu = ultimapneu;
-		}
-
-		/**
-		 * @return the proximapneu
-		 */
-		public String getProximapneu() {
-			return proximapneu;
-		}
-
-		/**
-		 * @param proximapneu the proximapneu to set
-		 */
-		public void setProximapneu(String proximapneu) {
-			this.proximapneu = proximapneu;
-		}
-
-		/**
-		 * @return the nomeoperador
-		 */
-		public String getNomeoperador() {
-			return nomeoperador;
-		}
-
-		/**
-		 * @param nomeoperador the nomeoperador to set
-		 */
-		public void setNomeoperador(String nomeoperador) {
-			this.nomeoperador = nomeoperador;
-		}
+		
 
 		/**
 		 * @return the creator
@@ -395,20 +259,17 @@ public class FrotaRealBean implements Parcelable {
 			dest.writeString(contratante);
 			dest.writeString(kminicial);
 			dest.writeString(ultimatrocaoil);
-			dest.writeString(proximatrocaoil);
+			
 			dest.writeString(ultimatrocaac);
-			dest.writeString(proximatrocaac);
+			
 			dest.writeString(ultimafiltro);
-			dest.writeString(proximafiltro);
+			
 			dest.writeString(ultimafreio);
-			dest.writeString(proximafreio);
+			
 			dest.writeString(ultimamangueira);
-			dest.writeString(proximamangueira);
+			
 			dest.writeString(ultimageral);
-			dest.writeString(proximageral);
-			dest.writeString(ultimapneu);
-			dest.writeString(proximapneu);
-			dest.writeString(nomeoperador);
+			
 			
 			
 		}

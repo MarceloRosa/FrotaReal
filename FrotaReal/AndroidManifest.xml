@@ -7,12 +7,36 @@
     <uses-sdk
         android:minSdkVersion="16"
         android:targetSdkVersion="18" />
+    <permission
+			android:name="com.example.frotareal.permission.MAPS_RECEIVE"
+			android:protectionLevel="signature" />
+	<uses-permission android:name="com.example.frotareal.permission.MAPS_RECEIVE" />	
+	<uses-permission android:name="android.permission.INTERNET"/>	
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_MMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        
+         <meta-data
+			android:name="com.google.android.maps.v2.API_KEY"
+			android:value="AIzaSyAWjoeaiU1M_NoVuch-DDYDdu8e0jy7u2k" />
+         
+         
         <activity
             android:name=".atividades.TelaInicialFrota"
             android:label="@string/app_name" >

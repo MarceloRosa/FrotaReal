@@ -29,11 +29,12 @@ public class TeladCadastro extends Activity {
 		buttonTeladCadastro.setOnClickListener(new OnClickListener() {
 			
 			@Override
-			public void onClick(View v) {FrotaRealBean frotarealBean =  registroHelper.getMaquina();
-			FrotaRealDAO frotarealDAO = new FrotaRealDAO(TeladCadastro.this);
-			frotarealDAO.registrarMaquina(frotarealBean);
-			frotarealDAO.close();
-			finish();
+			public void onClick(View v) {
+				FrotaRealBean frotarealBean =  registroHelper.getMaquina();
+				FrotaRealDAO frotarealDAO = new FrotaRealDAO(TeladCadastro.this);
+				frotarealDAO.registrarMaquina(frotarealBean);
+				frotarealDAO.close();
+				finish();
 			
 		}
 	});
