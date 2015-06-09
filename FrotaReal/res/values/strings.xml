@@ -41,6 +41,6 @@
 	<string name="remover_maquina">Remover</string>
 	<string name="item_relatorio">Relatório de manutenção</string>
 	<string name="item_atualizar">Atualizar cadastro</string>
-	<string name="item_cancelar">Cancelar</string>
+	<string name="item_cancelar">Voltar para o ínicio</string>
     
 </resources>

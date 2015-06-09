@@ -55,7 +55,7 @@ public class DadosParaManutencao3 extends FragmentActivity {
 		map = mapFrag.getMap();
 		map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 		
-		LatLng latLng = new LatLng(-23.564224, -46.653156);
+		LatLng latLng = new LatLng(-3.768958, -38.481889);
 		
 		CameraPosition cameraPosition = new CameraPosition.Builder().target(latLng).zoom(18).bearing(0).tilt(90).build();
 		CameraUpdate update = CameraUpdateFactory.newCameraPosition(cameraPosition);
