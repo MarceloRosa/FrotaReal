@@ -2,8 +2,7 @@ package com.example.frotareal.atividades;
 
 /*
 * 
-* @author 	Marcelo Rosa 
-* 			Jorge Lousada
+* @author 	Marcelo Rosa / Jorge Lousada* 			
 * 			
 * @version 1.0
 * Classe DadosParaManutencao: Activity para dados manutenção.

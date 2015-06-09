@@ -1,13 +1,14 @@
 package com.example.frotareal.Helper;
+
 /*
 * 
-* Adaptado por:
-* @author 	Marcelo Rosa 
+* @author 	Marcelo Rosa / Jorge Lousada* 			
 * 			
 * @version 1.0
-* Classe EdicaoHelper: Para auxiliar na edição dos dados.
+*Classe EdicaoHelper: Para auxiliar na edição dos dados.
 * 
 */
+
 
 import android.widget.Button;
 import android.widget.EditText;

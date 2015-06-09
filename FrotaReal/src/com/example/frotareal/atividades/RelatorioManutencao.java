@@ -1,4 +1,12 @@
 package com.example.frotareal.atividades;
+/*
+* 
+* @author 	Marcelo Rosa / Jorge Lousada* 			
+* 			
+* @version 1.0
+* Classe RelatórioManutencao: Activity para relatório.
+* 
+*/
 
 import com.example.frotareal.R;
 

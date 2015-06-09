@@ -1,4 +1,12 @@
 package com.example.frotareal.bean;
+/*
+* 
+* @author 	Marcelo Rosa / Jorge Lousada* 			
+* 			
+* @version 1.0
+* Classe FrotaRealBean: para utilização com DAO.
+* 
+*/
 
 
 import android.os.Parcel;

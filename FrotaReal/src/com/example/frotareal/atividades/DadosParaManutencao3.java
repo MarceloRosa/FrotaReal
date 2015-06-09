@@ -1,4 +1,12 @@
 package com.example.frotareal.atividades;
+/*
+* 
+* @author 	Marcelo Rosa / Jorge Lousada* 			
+* 			
+* @version 1.0
+* Classe DadosParaManutencao3: Activity para dados manutenção.
+* 
+*/
 
 import com.example.frotareal.R;
 import com.google.android.gms.maps.CameraUpdate;

@@ -1,4 +1,12 @@
 package com.example.frotareal.atividades;
+/*
+* 
+* @author 	Marcelo Rosa / Jorge Lousada* 			
+* 			
+* @version 1.0
+* Classe TeladCadastro: Activity para cadastro de maquinas.
+* 
+*/
 
 
 import com.example.frotareal.DAO.FrotaRealDAO;

@@ -1,13 +1,13 @@
 package com.example.frotareal.Helper;
 /*
 * 
-* @author 	Marcelo Rosa 
-* 			Jorge Lousada
+* @author 	Marcelo Rosa / Jorge Lousada* 			
 * 			
 * @version 1.0
-* Classe ManutencaoHelper: Ajuda na inserção de dados da manutenção.
+*Classe RegistroHelper: Ajuda na inserção de dados do cadastro.
 * 
 */
+
 
 import android.widget.Button;
 import android.widget.EditText;

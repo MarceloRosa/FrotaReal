@@ -1,5 +1,14 @@
 package com.example.frotareal.DAO;
 
+/*
+* 
+* @author 	Marcelo Rosa / Jorge Lousada* 			
+* 			
+* @version 1.0
+* Classe FrotaRealDAO: Acesso a dados e criação de BD.
+* 
+*/
+
 import java.util.ArrayList;
 import java.util.List;
 

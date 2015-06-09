@@ -1,4 +1,12 @@
 package com.example.frotareal.atividades;
+/*
+* 
+* @author 	Marcelo Rosa / Jorge Lousada* 			
+* 			
+* @version 1.0
+* Classe TelaInicial: Activity para tela inicial do app.
+* 
+*/
 
 import com.example.frotareal.R;
 import com.example.frotareal.DAO.FrotaRealDAO;

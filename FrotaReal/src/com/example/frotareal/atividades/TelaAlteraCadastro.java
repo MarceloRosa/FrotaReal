@@ -1,4 +1,12 @@
 package com.example.frotareal.atividades;
+/*
+* 
+* @author 	Marcelo Rosa / Jorge Lousada* 			
+* 			
+* @version 1.0
+* Classe TelaAlteraCadastro: Activity para alterar cadastro.
+* 
+*/
 
 import com.example.frotareal.atividades.*;
 import com.example.frotareal.bean.*;
