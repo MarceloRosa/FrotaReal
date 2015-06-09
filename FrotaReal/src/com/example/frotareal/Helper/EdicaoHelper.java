@@ -38,7 +38,7 @@ public class EdicaoHelper {
 		this.editTextPlaca = (EditText) atividade.findViewById(R.id.editTextPlaca);
 		this.editTextProprietario = (EditText) atividade.findViewById(R.id.editTextProprietario);
 		this.editTextObraContrat = (EditText) atividade.findViewById(R.id.editTextObraContrat);		
-		this.buttonTelaAlteraCadastro = (Button) atividade.findViewById(R.id.buttonTelaAlteraCadastro);
+		this.buttonTelaAlteraCadastro = (Button) atividade.findViewById(R.id.buttonTeladCadastro);
 		
 
 		Idp = extras.getId();

@@ -36,5 +36,11 @@
     <string name="title_activity_relatorio_manutencao">Relatório de Manutenção</string>
     <string name="title_activity_lista_equipamentos">Lista de Equipamentos</string>
     <string name="title_activity_tela_altera_cadastro">Alterar Cadastro</string>
-
+	<string name="BotaoSalvar">Salvar Cadastro</string>
+	
+	<string name="remover_maquina">Remover</string>
+	<string name="item_relatorio">Relatório de manutenção</string>
+	<string name="item_atualizar">Atualizar cadastro</string>
+	<string name="item_cancelar">Cancelar</string>
+    
 </resources>

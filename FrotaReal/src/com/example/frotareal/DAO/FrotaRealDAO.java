@@ -5,7 +5,9 @@ import java.util.List;
 
 
 
+
 import com.example.frotareal.bean.FrotaRealBean;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -19,7 +21,7 @@ public class FrotaRealDAO extends SQLiteOpenHelper {
 	
 	
 
-		public static final int VERSAO = 1;
+		public static final int VERSAO = 20;
 		public static final String TABELA = "frota";
 		public static final String DATABASE = "BD_FROTA";
 
@@ -57,6 +59,7 @@ public class FrotaRealDAO extends SQLiteOpenHelper {
 					+ ",'proximapneu' TEXT"
 					+ ",'nomeoperador' TEXT)";
 			db.execSQL(sql);
+			carregaDados(db);
 		}
 
 		@Override
@@ -197,6 +200,25 @@ public class FrotaRealDAO extends SQLiteOpenHelper {
 			getWritableDatabase().delete(TABELA, "id=?", args);
 
 			Log.i(TAG_R, "Maquina removida: "+ maquina.getModelo());
+		}
+		public void carregaDados(SQLiteDatabase db)
+		{
+		//Query de INSERT com os dados iniciais a serem carregados para o Banco de Dados
+		String sql = "INSERT INTO "+TABELA
+		+" ("
+		+"modelo,"
+		+" ano,"
+		+" placa,"
+		+" proprietario,"
+		+" contratante"
+		+")"
+		+" VALUES('Retro escavadeira','2012','OCG 1110','Marcelo','Adois Construções')"
+		+",('Pá mecânica','2015','ABC 123','Fernando','Pirilampo')"
+		;       
+		//Executa a Query de INSERT
+		db.execSQL(sql);
+		
+			
 		}
 
 }
