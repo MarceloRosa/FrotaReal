@@ -92,6 +92,36 @@ public class ManutencaoHelper {
 
 
 		}
+		public ManutencaoHelper(DadosParaManutencao2 atividade,FrotaRealBean extras){
+
+			this.editTextModeloE = (EditText) atividade.findViewById(R.id.editTextModeloE);
+			
+			this.editTextProximaTroFreio = (EditText) atividade.findViewById(R.id.editTextProximaTroFreio);
+			this.editTextUltimaTrocaMangu = (EditText) atividade.findViewById(R.id.editTextUltimaTrocaMangu);
+			this.editTextProximaTrocaMang = (EditText) atividade.findViewById(R.id.editTextProximaTrocaMang);
+			this.editTextUltimaRevisaoGeral = (EditText) atividade.findViewById(R.id.editTextUltimaRevisaoGeral);
+			this.editTextProximRevisaoG = (EditText) atividade.findViewById(R.id.editTextProximRevisaoG);
+			//this.editTextUltimaTrocaPneu = (EditText) atividade.findViewById(R.id.editTextUltimaTrocaPneu);
+			
+			//this.editTextProximaTrocaPneus = (EditText) atividade.findViewById(R.id.editTextProximaTrocaPneus);
+			
+			
+			this.buttonProximoManutencao2 = (Button) atividade.findViewById(R.id.buttonProximoManutencao2);
+			
+			Idm = extras.getId();
+			
+			editTextModeloE.setText(extras.getModelo());
+			
+			editTextProximaTroFreio.setText(extras.getProximafreio());
+			editTextUltimaTrocaMangu.setText(extras.getUltimamangueira());
+			editTextProximaTrocaMang.setText(extras.getProximamangueira());
+			editTextUltimaRevisaoGeral.setText(extras.getUltimamangueira());
+			editTextProximRevisaoG.setText(extras.getProximageral());
+			
+			maquina = this.getMaquina();
+
+
+		}
 		public FrotaRealBean getMaquina() {
 
 			FrotaRealBean maquina = new FrotaRealBean();
