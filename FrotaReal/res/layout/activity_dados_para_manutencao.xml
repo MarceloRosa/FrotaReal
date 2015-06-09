@@ -85,30 +85,11 @@
         android:inputType="number" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_below="@+id/editTextUltimaTrocaOleoF"
-        android:text="@string/ProximaTrocaOleofiltro"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <EditText
-        android:id="@+id/editTextQTDProximaOleoF"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/textView4"
-        android:ems="10"
-        android:inputType="number" />
-
-    <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/imageView1"
-        android:layout_below="@+id/editTextQTDProximaOleoF"
+        android:layout_below="@+id/editTextUltimaTrocaOleoF"
         android:text="@string/UltimatrocaFilroAC"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -123,30 +104,11 @@
         android:inputType="number" />
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_below="@+id/editTextUltimaTrocaAC"
-        android:text="@string/ProximaTrocaFiltroAC"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <EditText
-        android:id="@+id/editTextProximaTrocaFiltroAC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_alignRight="@+id/imageView1"
-        android:layout_below="@+id/textView6"
-        android:ems="10"
-        android:inputType="number" />
-
-    <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/imageView1"
-        android:layout_below="@+id/editTextProximaTrocaFiltroAC"
+        android:layout_below="@+id/editTextUltimaTrocaAC"
         android:text="@string/UltimatrocaFreio"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -177,5 +139,43 @@
         android:layout_alignLeft="@+id/textView1"
         android:layout_alignRight="@+id/imageView2"
         android:text="@string/BotaoProxima" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_below="@+id/editTextUltimaTrocaFreio"
+        android:text="@string/UltimatrocaMangueira"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/editTextUltimaTrocaMangueira"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignRight="@+id/imageView1"
+        android:layout_below="@+id/textView4"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_below="@+id/editTextUltimaTrocaMangueira"
+        android:text="@string/UltimaRevisaoGeral"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/editTextUltimaRevisaoGeral2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignRight="@+id/imageView2"
+        android:layout_below="@+id/textView6"
+        android:ems="10"
+        android:inputType="number" />
 
 </RelativeLayout>
