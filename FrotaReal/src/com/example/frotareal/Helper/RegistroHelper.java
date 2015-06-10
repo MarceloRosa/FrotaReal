@@ -9,12 +9,12 @@ package com.example.frotareal.Helper;
 */
 
 
-import android.widget.Button;
+import android.util.Log;
 import android.widget.EditText;
 
-import com.example.frotareal.atividades.*;
-import com.example.frotareal.bean.FrotaRealBean;
 import com.example.frotareal.R;
+import com.example.frotareal.atividades.TeladCadastro;
+import com.example.frotareal.bean.FrotaRealBean;
 
 public class RegistroHelper {
 	
@@ -40,8 +40,9 @@ public class RegistroHelper {
 		
 
 		public FrotaRealBean getMaquina(){
-			FrotaRealBean maquina = new FrotaRealBean();		
+			maquina = new FrotaRealBean();		
 			
+			Log.i("helper",editTextModeloE.getText().toString());
 			maquina.setModelo(editTextModeloE.getText().toString());
 			maquina.setAno(editTextAnoFab.getText().toString());
 			maquina.setPlaca(editTextPlaca.getText().toString());

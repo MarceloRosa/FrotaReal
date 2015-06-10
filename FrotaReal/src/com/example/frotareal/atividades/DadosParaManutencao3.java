@@ -43,11 +43,6 @@ public class DadosParaManutencao3 extends FragmentActivity {
 		
 		map = mapFrag.getMap();
 		
-		/*mapFrag = SupportMapFragment.newInstance(options);
-		
-		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-		ft.replace(R.id.fragment1, mapFrag);
-		ft.commit();*/
 		
 		configMap();
 	}
